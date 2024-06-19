@@ -9,6 +9,8 @@
     {% for produto in produtos %}
     <h2>{{ produto.nome }}</h2>
     <p>{{ produto.descricao }}</p>
+    <p>R${{ produto.preco }}</p>
+    <img src="{{ produto.imagem }}" alt="imagem">
     <a href="/produtos/{{ produto.nome }}">Ver detalhes</a>
     {% endfor %}
 {% endblock %}
