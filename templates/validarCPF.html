@@ -1,0 +1,13 @@
+{% extends "base2.html" %}
+
+{% block title %}Validar CPF{% endblock %}
+
+{% block content %}
+<h1>Validar CPF</h1>
+<form action="/cpf" method="post">
+    <label for="validar">Validar CPF</label>
+    <input type="text" name="validar" id="validar">
+    <button type="submit">Validar</button>
+    </form>
+    
+{% endblock %}

@@ -6,6 +6,10 @@ lista_produtos = [
     {"nome": "Água", "descricao": "mata sede", "preco": "2,50", "imagem": "https://fontagua.com.br/wp-content/uploads/2019/02/FONTAGUA_GARRAFA-350ML-GAS.jpg"},
 ]
 
+lista_cpf = [
+    {}
+]
+
 app = Flask("minha app")
 
 @app.route("/")
@@ -43,3 +47,25 @@ def salvar_produto():
     lista_produtos.append(produto)
 
     return redirect(url_for("produtos"))
+
+@app.route("/gerarCPF")
+def gerar_cpf():
+    return render_template("gerarCPF.html")
+
+@app.route("/gerarCNPJ")
+def gerar_cnpj():
+    return render_template("gerarCNPJ.html")
+
+@app.route("/validarCNPJ")
+def validar_cnpj():
+    return render_template("validarCNPJ.html")
+
+@app.route("/validarCPF")
+def validar_cpf():
+    return render_template("validarCPF.html")
+
+app.route("/validarCPF", methods=["POST"])
+def salvar_produto():
+    validar_cpf = request.form['validar']
+    return render_template("cpf.html")
+    
