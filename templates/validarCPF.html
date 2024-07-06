@@ -4,10 +4,9 @@
 
 {% block content %}
 <h1>Validar CPF</h1>
-<form action="/cpf" method="post">
-    <label for="validar">Validar CPF</label>
-    <input type="text" name="validar" id="validar">
+<form action="/validar-CPF" method="POST">
+    <label for="cpf">Validar CPF</label>
+    <input type="text" name="cpf" id="cpf" required> 
     <button type="submit">Validar</button>
-    </form>
-    
+</form>
 {% endblock %}

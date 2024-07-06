@@ -3,11 +3,10 @@
 {% block title %}Validar CPF{% endblock %}
 
 {% block content %}
-<h1>Validar CPF</h1>
-<form action="/cnpj" method="post">
-    <label for="validarcnpj">Validar CNPJ</label>
-    <input type="text" name="validarcnpj" id="validarcnpj">
+<h1>Validar CNPJ</h1>
+<form action="/validar-CNPJ" method="POST">
+    <label for="cnpj">Validar CNPJ</label>
+    <input type="text" name="cnpj" id="cnpj" required> 
     <button type="submit">Validar</button>
-    </form>
-    
+</form>
 {% endblock %}
